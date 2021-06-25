@@ -9,3 +9,21 @@ Saving varies by the type of work you are doing:
 -- *Git repositories that you clone into the Sandbox are NOT automatically saved.* In this case, you are responsible for committing and pushing your work to GitHub. 
 
 To learn more about the Sandbox, please visit http://help.learn.co/technical-support/learn-ide-in-browser/ide-in-browser-sandbox
+function find(array, criteriaFn) {
+let current = array
+let next = []
+while (current || current === 0) {
+if (criteriaFn(current)) {
+      return current
+    }
+       if (Array.isArray(current)) {
+      for (let i = 0; i < current.length; i++) {
+        next.push(current[i])
+      }
+    }
+     current = next.shift()
+  }
+ 
+ return null
+}
+ 
